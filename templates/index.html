@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drinking Game</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+    }
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+      background-color: #ff4757;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Drinking Game</h1>
+  <div id="challenge-container">
+    <p id="challenge-text">Press the button to get a challenge!</p>
+    <button id="new-challenge-btn">New Challenge</button>
+  </div>
+
+  <script>
+    const btn = document.getElementById('new-challenge-btn');
+    const txt = document.getElementById('challenge-text');
+
+    btn.addEventListener('click', () => {
+      fetch('/challenge')
+        .then(res => res.json())
+        .then(data => {
+          txt.textContent = data.challenge;
+        })
+        .catch(err => {
+          txt.textContent = 'Oops! Something went wrong.';
+          console.error(err);
+        });
+    });
+  </script>
+</body>
+</html>
