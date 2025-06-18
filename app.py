@@ -18,7 +18,6 @@ challenges = [
     "Drink if you don't like someone's partner",
     "Open 'my eyes only' or drink 4",
     "Drink if you have dated someone younger than you",
-    
     "Have you ever faked an orgasm?",
     "Never have I ever ghosted someone",
     "Who's most likely to ghost after sex?",
