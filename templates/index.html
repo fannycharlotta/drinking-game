@@ -12,6 +12,15 @@
       background-color: #508bfa;
       color: #f0f0f0;
     }
+    
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 48px;
+      margin-bottom: 40px;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
     button {
       font-size: 30px;
       padding: 10px 20px;
@@ -21,16 +30,56 @@
       border-radius: 8px;
       cursor: pointer;
     }
-
+    
+    button:hover {
+      background-color: #ff6b81;
+    }
 
     #challenge-text {
       font-size: 28px;
       font-weight: bold;
       margin: 40px 20px;
     }
+        /* Flower decorations */
+    .flower {
+      position: absolute;
+      width: 80px;
+      opacity: 0.8;
+      z-index: 1;
+    }
+
+    .top-left {
+      top: 20px;
+      left: 20px;
+      transform: rotate(-15deg);
+    }
+
+    .top-right {
+      top: 20px;
+      right: 20px;
+      transform: rotate(20deg);
+    }
+
+    .bottom-left {
+      bottom: 20px;
+      left: 20px;
+      transform: rotate(10deg);
+    }
+
+    .bottom-right {
+      bottom: 20px;
+      right: 20px;
+      transform: rotate(-20deg);
+    }
   </style>
 </head>
 <body>
+
+  <img src="https://cdn.pixabay.com/photo/2013/07/12/17/00/daisy-151817_1280.png" class="flower top-left" alt="flower">
+  <img src="https://cdn.pixabay.com/photo/2013/07/12/17/00/daisy-151817_1280.png" class="flower top-right" alt="flower">
+  <img src="https://cdn.pixabay.com/photo/2013/07/12/17/00/daisy-151817_1280.png" class="flower bottom-left" alt="flower">
+  <img src="https://cdn.pixabay.com/photo/2013/07/12/17/00/daisy-151817_1280.png" class="flower bottom-right" alt="flower">
+
   <h1>Juhannuksen Kuumimmat Kysymykset</h1>
   <div id="challenge-container">
     <p id="challenge-text">Press the button to get a challenge!</p>
