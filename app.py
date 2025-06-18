@@ -15,6 +15,10 @@ challenges = [
     "Text your last sneaky link 'I miss you' or take a shot",
     "Who's the most likely to date two people at once?",
     "Never have I ever forgot how I got home",
+    "Drink if you don't like someone's partner",
+    "Open 'my eyes only' or drink 4",
+    "Drink if you have dated someone younger than you",
+    
     "Have you ever faked an orgasm?",
     "Never have I ever ghosted someone",
     "Who's most likely to ghost after sex?",
