@@ -1,4 +1,5 @@
 from flask import Flask, render_template, jsonify
+import random
 
 app = Flask(__name__)
 
@@ -95,7 +96,7 @@ challenges = [
 ]
 
 
-current_index = 0
+remaining_challenges = []
 
 @app.route('/')
 def index():
@@ -103,15 +104,13 @@ def index():
 
 @app.route('/challenge')
 def challenge():
-    global current_index
+    global remaining_challenges
 
-    # Get current challenge
-    challenge_text = challenges[current_index]
+    if not remaining_challenges:
+        remaining_challenges = challenges.copy()
+        random.shuffle(remaining_challenges)
 
-    # Move to the next one, loop around if at the end
-    current_index = (current_index + 1) % len(challenges)
-
-    return jsonify({"challenge": challenge_text})
+    return jsonify({"challenge": remaining_challenges.pop()})
 
 if __name__ == '__main__':
     app.run(debug=True)
